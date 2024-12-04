@@ -9,15 +9,3 @@
     - glance
     - keystone
   when: ansible_os_family == "Debian"
-
-- name: Install SQL Database
-  apt:
-    name: mysql-server
-    state: present
-  when: ansible_os_family == "Debian"
-
-- name: Install Message Queue
-  apt:
-    name: rabbitmq-server
-    state: present
-  when: ansible_os_family == "Debian"
