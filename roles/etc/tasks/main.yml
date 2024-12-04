@@ -1,15 +1,3 @@
-- name: Install OpenStack packages
-  apt:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - python3-openstackclient
-    - nova-compute
-    - neutron-server
-    - glance
-    - keystone
-  when: ansible_os_family == "Debian"
-
 - name: Install Memcached
   apt:
     name: memcached
